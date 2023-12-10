@@ -441,6 +441,7 @@ export default {
   KC_SFTENT: 0x7c1e,
   OUT_AUTO: 0x7c20,
   OUT_USB: 0x7c21,
+  OUT_WM: 0x7c22,
   QK_CLEAR_EEPROM: 0x7c03,
   HPT_ON: 0x7c40,
   HPT_OFF: 0x7c41,
@@ -478,4 +479,6 @@ export default {
   DYN_MACRO_PLAY2: 0x7c57,
   FN_MO13: 0x7c77,
   FN_MO23: 0x7c78,
+  GU_TOGG: 0x700B,
+  WM_PEER: 0x5700,
 };
