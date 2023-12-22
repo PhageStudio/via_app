@@ -442,6 +442,7 @@ export default {
   OUT_AUTO: 0x7c20,
   OUT_USB: 0x7c21,
   OUT_WM: 0x7c22,
+  OUT_WMMD: 0x7c23,
   QK_CLEAR_EEPROM: 0x7c03,
   HPT_ON: 0x7c40,
   HPT_OFF: 0x7c41,

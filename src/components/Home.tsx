@@ -1,7 +1,7 @@
-import React, {createRef, useEffect} from 'react';
+import React, { createRef, useEffect } from 'react';
 import styled from 'styled-components';
-import {getByteForCode} from '../utils/key';
-import {startMonitoring, usbDetect} from '../utils/usb-hid';
+import { getByteForCode } from '../utils/key';
+import { startMonitoring, usbDetect } from '../utils/usb-hid';
 import {
   getLightingDefinition,
   isVIADefinitionV2,
@@ -16,8 +16,8 @@ import {
   loadSupportedIds,
   reloadConnectedDevices,
 } from 'src/store/devicesThunks';
-import {getDisableFastRemap} from '../store/settingsSlice';
-import {useAppDispatch, useAppSelector} from 'src/store/hooks';
+import { getDisableFastRemap } from '../store/settingsSlice';
+import { useAppDispatch, useAppSelector } from 'src/store/hooks';
 import {
   getSelectedKey,
   getSelectedLayerIndex,
@@ -28,8 +28,8 @@ import {
   getSelectedDefinition,
   getSelectedKeyDefinitions,
 } from 'src/store/definitionsSlice';
-import {OVERRIDE_HID_CHECK} from 'src/utils/override';
-import {KeyboardValue} from 'src/utils/keyboard-api';
+import { OVERRIDE_HID_CHECK } from 'src/utils/override';
+import { KeyboardValue } from 'src/utils/keyboard-api';
 
 const ErrorHome = styled.div`
   background: var(--bg_gradient);
@@ -74,13 +74,13 @@ const UsbErrorWebHIDLink = styled.a`
 
 const timeoutRepeater =
   (fn: () => void, timeout: number, numToRepeat = 0) =>
-  () =>
-    setTimeout(() => {
-      fn();
-      if (numToRepeat > 0) {
-        timeoutRepeater(fn, timeout, numToRepeat - 1)();
-      }
-    }, timeout);
+    () =>
+      setTimeout(() => {
+        fn();
+        if (numToRepeat > 0) {
+          timeoutRepeater(fn, timeout, numToRepeat - 1)();
+        }
+      }, timeout);
 
 interface HomeProps {
   children?: React.ReactNode;
@@ -88,7 +88,7 @@ interface HomeProps {
 }
 
 export const Home: React.FC<HomeProps> = (props) => {
-  const {hasHIDSupport} = props;
+  const { hasHIDSupport } = props;
 
   const dispatch = useAppDispatch();
   const selectedKey = useAppSelector(getSelectedKey);
@@ -97,7 +97,7 @@ export const Home: React.FC<HomeProps> = (props) => {
   const selectedLayerIndex = useAppSelector(getSelectedLayerIndex);
   const selectedKeyDefinitions = useAppSelector(getSelectedKeyDefinitions);
   const disableFastRemap = useAppSelector(getDisableFastRemap);
-  const {basicKeyToByte} = useAppSelector(getBasicKeyToByte);
+  const { basicKeyToByte } = useAppSelector(getBasicKeyToByte);
   const api = useAppSelector(getSelectedKeyboardAPI);
 
   const updateDevicesRepeat: () => void = timeoutRepeater(
@@ -188,6 +188,9 @@ export const Home: React.FC<HomeProps> = (props) => {
       </UsbError>
     </ErrorHome>
   ) : (
-    <>{props.children}</>
+    <>
+      {props.children}
+      {/* <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2023049720号</a> */}
+    </>
   );
 };

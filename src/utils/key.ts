@@ -942,7 +942,7 @@ export function getKeycodes(numMacros = 16): IKeycodeMenu[] {
           name: 'Out Auto', 
           code: 'OUT_AUTO', 
           title: 'Output auto select',
-          shortName: 'OAuto'
+          shortName: 'OAUTO'
         },
         {
           name: 'Out USB', 
@@ -956,6 +956,12 @@ export function getKeycodes(numMacros = 16): IKeycodeMenu[] {
           title: 'Output force select Wireless',
           shortName: 'FrcWM'
         },
+        {
+          name: 'Wireless Mode',
+          code: 'OUT_WMMD',
+          title: 'Wireless mode toggle 2.4G or BLE',
+          shortName: 'WMMod'
+        }
       ],
     },
     /* These are for controlling the original backlighting and bottom RGB. */
