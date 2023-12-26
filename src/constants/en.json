@@ -26,6 +26,8 @@
     "ilabelEnable Peer Indicators": "Enable Peer Indicators",
     "ilabelUsage": "Usage",
     "ilabelAlternate Usage": "Alternate Usage",
+    "ilabelInvert Logic": "Inverse Logic",
+    "ilabelNo Cover": "No Cover",
     "ilabelOutput Select": "Output Select",
     "ilabelNo Selector": "No Selector",
     "ilabelWireless Mode":"Wireless Mode",
