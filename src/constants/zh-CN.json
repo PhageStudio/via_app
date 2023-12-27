@@ -26,7 +26,7 @@
     "ilabelEnable Peer Indicators": "使能配对指示灯",
     "ilabelUsage": "灯光功能",
     "ilabelAlternate Usage": "灯光复用功能",
-    "ilabelInvert Logic": "反转信号逻辑",
+    "ilabelInverse Logic": "反转信号逻辑",
     "ilabelNo Cover": "禁用覆盖",
     "ilabelOutput Select": "输出选择",
     "ilabelNo Selector": "禁用物理切换按键",
