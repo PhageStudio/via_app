@@ -190,7 +190,6 @@ export const Home: React.FC<HomeProps> = (props) => {
   ) : (
     <>
       {props.children}
-      {/* <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2023049720号</a> */}
     </>
   );
 };

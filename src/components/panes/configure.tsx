@@ -47,6 +47,17 @@ const MenuContainer = styled.div`
   padding: 15px 10px 20px 10px;
 `;
 
+const ICPContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  height: 70px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  font-size: 12px;
+`;
+
 const Rows = [
   Keycode,
   Macros,
@@ -177,6 +188,11 @@ const Loader: React.FC<{
       ) : (
         <LoadingText isSearching={!selectedDefinition} />
       )}
+      <ICPContainer>
+        <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2023049720号&nbsp;&nbsp;</a>
+        <img width="18" height="18" src="https://blog.youchuande.cn/usr/themes/Cuckoo/assets/images/beian.png"/>
+        <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=37078302000811">&nbsp;&nbsp;鲁公网安备37078302000811号</a>
+      </ICPContainer>
     </LoaderPane>
   );
 };
